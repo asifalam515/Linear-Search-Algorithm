@@ -2,25 +2,25 @@ package com.company;
 
 public class Code {
     public static void main(String[] args) {
-        int []arr={34,56,778,45,454};
-        int target=454;
-        int ans=linearCode(arr,target);
-        System.out.println(ans);
+        int []nums={34,7,768,7,23};
+        int target=2345;
+
+        System.out.println(linearCode(nums,target));
     }
-    static int linearCode(int []arr,int target)
-    {
-        if (arr.length==0){
+
+
+    static int linearCode(int []arr,int target){
+        if(arr.length==0){
             return -1;
-
         }
-        for (int indexNumber = 0; indexNumber < arr.length; indexNumber++) {
-            int element=arr[indexNumber];
 
-            if (element==target){
-                return indexNumber;
+        for (int index = 0; index < arr.length; index++) {
+            int element=arr[index];
+            if(element==target){
+                return index;
             }
         }
-      return -1;
+ return  -1;
     }
 
 }
